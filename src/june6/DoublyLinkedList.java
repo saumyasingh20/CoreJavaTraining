@@ -2,6 +2,7 @@ package june6;
 
 public class DoublyLinkedList {
     static DoublyLLNode head;
+    static DoublyLLNode tail;
     static class DoublyLLNode{
         int data;
         DoublyLLNode next;
@@ -32,8 +33,10 @@ public class DoublyLinkedList {
             head = nodeToBeInserted;
             return head;
         }
+        head.prev = nodeToBeInserted;
         nodeToBeInserted.next=head;
         head = nodeToBeInserted;
+        head.prev = null;
         return head;
     }
     public static DoublyLLNode addLast(DoublyLLNode nodeToBeInserted){
@@ -47,6 +50,7 @@ public class DoublyLinkedList {
         }
         temp.next=nodeToBeInserted;
         nodeToBeInserted.prev = temp;
+        tail = nodeToBeInserted;
         return head;
     }
     public static DoublyLLNode insertAfter(DoublyLLNode prev,DoublyLLNode newNode){
@@ -82,6 +86,23 @@ public class DoublyLinkedList {
 
 
     }
+    public static DoublyLLNode reachTail(DoublyLLNode head){
+        DoublyLLNode temp = head;
+        while (temp.next!=null){
+            temp=temp.next;
+        }
+        tail = temp;
+        return tail;
+
+    }
+    public static void printBackwards(DoublyLLNode tail){
+        DoublyLLNode temp = tail;
+        while (temp!=null){
+            System.out.print(temp.data+" ");
+            temp = temp.prev;
+        }
+//        System.out.print(head.data);
+    }
 
     public static void main(String[] args) {
         DoublyLLNode node1 = new DoublyLLNode(10);
@@ -95,12 +116,15 @@ public class DoublyLinkedList {
         node3.prev = node2;
         node3.next= node4;
         node4.prev = node3;
-        addFirst(new DoublyLLNode(5));
+       addFirst(new DoublyLLNode(5));
         addLast(new DoublyLLNode(60));
 
         insertAfter(node2,new DoublyLLNode(70));
 
-        deleteNode(30);
+//        deleteNode(30);
         printDoublyLL();
+        DoublyLLNode tail = reachTail(head);
+        System.out.println();
+        printBackwards(tail);
     }
 }
