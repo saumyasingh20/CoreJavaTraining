@@ -3,7 +3,7 @@ package june6;
 
 public class LinkedList {
     static LinkedListNode head;
-    static class LinkedListNode  {
+    static class LinkedListNode {
         int data;
         LinkedListNode next;
 
@@ -44,7 +44,6 @@ public class LinkedList {
     public static LinkedListNode addLast(LinkedListNode nodeToBeInserted){
         if (head==null){
             head=nodeToBeInserted;
-            head.next=null;
             return nodeToBeInserted;
         }
         LinkedListNode temp = head;
@@ -52,6 +51,7 @@ public class LinkedList {
             temp=temp.next;
         }
         temp.next=nodeToBeInserted;
+
         return head;
     }
 
