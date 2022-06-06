@@ -101,7 +101,7 @@ public class DoublyLinkedList {
             System.out.print(temp.data+" ");
             temp = temp.prev;
         }
-//        System.out.print(head.data);
+
     }
 
     public static void main(String[] args) {
@@ -109,6 +109,7 @@ public class DoublyLinkedList {
         DoublyLLNode node2 = new DoublyLLNode(20);
         DoublyLLNode node3 = new DoublyLLNode(30);
         DoublyLLNode node4 = new DoublyLLNode(40);
+        DoublyLLNode node5 = new DoublyLLNode(50);
         head = node1;
         node1.next=node2;
         node2.prev = node1;
@@ -116,15 +117,20 @@ public class DoublyLinkedList {
         node3.prev = node2;
         node3.next= node4;
         node4.prev = node3;
-       addFirst(new DoublyLLNode(5));
+        node4.next=node5;
+        node5.prev = node4;
+
+        addFirst(new DoublyLLNode(5));
         addLast(new DoublyLLNode(60));
 
         insertAfter(node2,new DoublyLLNode(70));
 
-//        deleteNode(30);
+        deleteNode(30);
         printDoublyLL();
+
         DoublyLLNode tail = reachTail(head);
         System.out.println();
+
         printBackwards(tail);
     }
 }
