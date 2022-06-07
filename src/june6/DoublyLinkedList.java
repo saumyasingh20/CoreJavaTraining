@@ -36,7 +36,6 @@ public class DoublyLinkedList {
         head.prev = nodeToBeInserted;
         nodeToBeInserted.next=head;
         head = nodeToBeInserted;
-        head.prev = null;
         return head;
     }
     public static DoublyLLNode addLast(DoublyLLNode nodeToBeInserted){
