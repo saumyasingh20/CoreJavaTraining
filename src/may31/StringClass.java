@@ -4,7 +4,7 @@ import java.io.OutputStream;
 
 public class StringClass {
     public static void main(String[] args) {
-        String str = "This is a Sample string to test all the methods of string class ";
+        String str = "This is a Sample string to Testing.test all the methods of string class ";
         System.out.println(str.length());
         System.out.println(str.charAt(51)+" "+str.charAt(52));
         System.out.println(str.indexOf('z'));
@@ -25,7 +25,7 @@ public class StringClass {
 
         String str5 = str.substring(0,10);
         System.out.println(str5);
-        String str6 = "          test         ";
+        String str6 = "          Testing.test         ";
         str6= str6.stripLeading();
         System.out.println(str6);
         String str7 = str6.concat("hi yo");

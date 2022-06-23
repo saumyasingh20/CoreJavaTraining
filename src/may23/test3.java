@@ -22,7 +22,6 @@ public class test3 {
             if(checkPrime(i)){
                 System.out.print(i+" ");
             }
-
         }
 
 
