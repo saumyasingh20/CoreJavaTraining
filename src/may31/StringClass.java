@@ -1,5 +1,7 @@
 package may31;
 
+import java.io.OutputStream;
+
 public class StringClass {
     public static void main(String[] args) {
         String str = "This is a Sample string to test all the methods of string class ";
@@ -29,9 +31,10 @@ public class StringClass {
         String str7 = str6.concat("hi yo");
         System.out.println(str7);
         StringBuffer str8 = new StringBuffer(str);
-
         str8.reverse();
         System.out.println(str8);
+
+
 
 
     }

@@ -1,5 +1,6 @@
 package StreamDemo;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
@@ -8,6 +9,7 @@ public class PrintStreamDemo {
         PrintStream ps = new PrintStream("C:\\Users\\saumya.singh\\eclipse-workspace\\CoreJavaTraining\\src\\StreamDemo\\Test.txt");
         ps.print("hey testing print stream");
         ps.println();
+
         ps.println(78);
         ps.println(new char[]{'s','a','u','m','y'});
         ps.println(3455456);
