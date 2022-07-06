@@ -49,7 +49,7 @@ public class ComparableDemo {
             System.out.println(it.next());
         }
 //        for (Student s : arr){
-//            System.out.println(s.id+" "+ s.marks+" "+ s.name);
+//            System.out.pr intln(s.id+" "+ s.marks+" "+ s.name);
 //        }
 
     }
